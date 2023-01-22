@@ -10,12 +10,14 @@
 
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
-    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    flex-direction: column;
   }
 
   @media only screen and (max-width: $bp-smallest) {
     width: 100%;
-    flex-wrap: wrap;
   }
 
   &__option {
@@ -39,7 +41,6 @@
 
     @media only screen and (max-width: $bp-smaller) {
       padding: 0;
-      flex-wrap: wrap;
     }
   }
 
