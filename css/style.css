@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 90em) {
+    html {
+      font-size: 68.75%; } }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+
+::selection {
+  background-color: #00494d; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  min-height: 100vh; }
+
+.btn {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer; }
+  .btn__tip {
+    background-color: #00494d;
+    color: white; }
+  .btn__reset {
+    background-color: rgba(94, 122, 125, 0.5);
+    color: #00494d;
+    margin-top: auto; }
+  .btn:active {
+    background-color: #26c0ab;
+    transform: translateY(-0.1rem); }
+  .btn--active {
+    background-color: #26c0ab; }
+
+.calculator {
+  display: flex;
+  background: white;
+  font-size: 1.8rem;
+  width: 70%;
+  border-radius: 1rem;
+  gap: 3rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 64em) {
+    .calculator {
+      padding: 3rem;
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 37.5em) {
+    .calculator {
+      width: 100%;
+      flex-wrap: wrap; } }
+  .calculator__option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem; }
+    .calculator__option--box:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-gap: 0.8rem; }
+    @media only screen and (max-width: 45.31em) {
+      .calculator__option {
+        padding: 0;
+        flex-wrap: wrap; } }
+  .calculator__display {
+    flex: 0 0 40%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: #00494d;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; }
+    @media only screen and (max-width: 64em) {
+      .calculator__display {
+        flex: 1; } }
+  .calculator__form {
+    position: relative;
+    display: flex;
+    align-items: center; }
+  .calculator__heading {
+    color: #5e7a7d;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem; }
+    .calculator__heading:nth-child(1) {
+      grid-column: 1 / -1; }
+    .calculator__heading--secondary {
+      color: white;
+      font-size: 1.8rem; }
+  .calculator__text {
+    color: #7f9c9f;
+    font-size: 1.4rem; }
+  .calculator__img {
+    position: absolute;
+    left: 1rem; }
+  .calculator__input {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 2.4rem;
+    background-color: #f4fafa;
+    color: #00494d;
+    text-align: right;
+    border: none;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 0.2rem 2rem; }
+    .calculator__input::-webkit-input-placeholder {
+      color: #5e7a7d; }
+    .calculator__input:focus {
+      outline: 0.1rem solid #26c0ab; }
+    .calculator__input::-webkit-inner-spin-button, .calculator__input::-webkit-outer-spin-button {
+      appearance: none; }
+    .calculator__input:not(.calculator__input--custom) {
+      width: 100%; }
+    .calculator__input--custom:focus {
+      text-align: right; }
+  .calculator__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.4rem; }
+  .calculator__amount, .calculator__tip {
+    font-weight: 700;
+    color: #26c0ab;
+    font-size: 4.2rem; }
+  .calculator__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .calculator__error {
+    color: red;
+    display: none;
+    font-size: 1.6rem; }
