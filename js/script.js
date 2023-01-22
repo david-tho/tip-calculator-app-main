@@ -33,7 +33,7 @@ const peopleInputFun = function () {
 
   if (peopleValue < 1) {
     error.style.display = "flex";
-    peopleInput.style.border = ".1rem solid red";
+    peopleInput.style.border = ".2rem solid red";
   } else {
     error.style.display = "none";
     peopleInput.style.border = "none";
@@ -50,8 +50,9 @@ const tipInputFun = function () {
 
 const handleClick = function (e) {
   tipsBtn.forEach((val) => {
+    val.classList.remove("btn--active");
     if (e.target.innerHTML === val.innerHTML) {
-      val.classList.toggle("btn--active");
+      val.classList.add("btn--active");
       tipValue = parseFloat(val.innerHTML) / 100;
     }
   });
