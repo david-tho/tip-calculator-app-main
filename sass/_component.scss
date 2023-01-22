@@ -1,0 +1,159 @@
+.calculator {
+  display: flex;
+  background: $color-white;
+  font-size: $font-size-default;
+  width: 70%;
+  border-radius: 1rem;
+  gap: 3rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__option {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    // padding: 0 2rem 0 0;
+
+    &--box:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-gap: 0.8rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+      padding: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__display {
+    flex: 0 0 40%;
+
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: $color-very-dark-cyan;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading {
+    color: $color-dark-grayish-cyan;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+
+    &:nth-child(1) {
+      grid-column: 1 / -1;
+    }
+
+    &--secondary {
+      color: $color-white;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__text {
+    color: $color-grayish-cyan;
+    font-size: 1.4rem;
+  }
+
+  &__img {
+    position: absolute;
+    left: 1rem;
+  }
+
+  &__input {
+    font-family: $font-primary;
+    font-weight: $font-weight-primary;
+    font-size: $font-size-inputs;
+    background-color: $color-very-light-grayish-cyan;
+    color: $color-very-dark-cyan;
+    text-align: right;
+    border: none;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 0.2rem 2rem;
+
+    &::-webkit-input-placeholder {
+      color: $color-dark-grayish-cyan;
+    }
+
+    &:focus {
+      outline: 0.1rem solid $color-strong-cyan;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+
+    &:not(&--custom) {
+      width: 100%;
+    }
+
+    &--custom:focus {
+      text-align: right;
+    }
+  }
+
+  &__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.4rem;
+
+    &--1 {
+    }
+
+    &--2 {
+    }
+  }
+
+  &__amount,
+  &__tip {
+    font-weight: $font-weight-primary;
+    color: $color-strong-cyan;
+    font-size: 4.2rem;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__error {
+    color: red;
+    display: none;
+    font-size: 1.6rem;
+  }
+}

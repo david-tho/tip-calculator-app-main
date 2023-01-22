@@ -1,0 +1,31 @@
+.btn {
+  font-family: $font-primary;
+  font-weight: $font-weight-primary;
+  font-size: $font-size-default;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+
+  &__tip {
+    background-color: $color-very-dark-cyan;
+    color: $color-white;
+  }
+
+  &__reset {
+    background-color: rgba($color-dark-grayish-cyan, 0.5);
+    color: $color-very-dark-cyan;
+    margin-top: auto;
+  }
+
+  &:active {
+    background-color: $color-strong-cyan;
+    transform: translateY(-0.1rem);
+  }
+
+  &--active {
+    background-color: $color-strong-cyan;
+  }
+}

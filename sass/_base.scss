@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+// PRIMARY
+$color-strong-cyan: hsl(172, 67%, 45%);
+
+// Neutral
+$color-very-dark-cyan: hsl(183, 100%, 15%);
+$color-dark-grayish-cyan: hsl(186, 14%, 43%);
+$color-grayish-cyan: hsl(184, 14%, 56%);
+$color-light-grayish-cyan: hsl(185, 41%, 84%);
+$color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+$color-white: hsl(0, 0%, 100%);
+
+// Font Size
+$font-size-inputs: 2.4rem;
+$font-size-default: 1.8rem;
+
+// Font Family
+$font-primary: "Space Mono", monospace;
+
+// Font Weight
+$font-weight-primary: 700;
+
+// Breakpoints Media Responsive
+$bp-largest: 90em;
+$bp-medium: 64em;
+$bp-smaller: 45.31em;
+$bp-smallest: 37.5em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: $bp-largest) {
+    font-size: 68.75%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 50%;
+  }
+}
+
+::selection {
+  background-color: $color-very-dark-cyan;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: $color-light-grayish-cyan;
+  font-family: $font-primary;
+
+  min-height: 100vh;
+}
+
+// .error {
+//   border: 0.2rem solid red;
+// }
+
+// .error-message {
+//   gap: 0;
+// }
+
+// .error-message::before {
+//   content: "Can't be blank";
+//   color: red;
+// }
